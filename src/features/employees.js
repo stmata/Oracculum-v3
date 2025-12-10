@@ -1,6 +1,4 @@
-const BASE_URL =
-  (window._env_ && window._env_.VITE_APP_BASE_URL2) ||  
-  import.meta.env.VITE_APP_BASE_URL2
+const BASE_URL = window._env_?.VITE_APP_BAS_URL2;
 
 const URL_IMPORT = `${BASE_URL}/import_employees`;
 const URL_PEOPLE_OVERVIEW = `${BASE_URL}/people_overview`;
