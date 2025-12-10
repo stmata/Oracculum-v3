@@ -21,15 +21,24 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '~20'
+          node-version: '20.x'
 
-      - name: npm install, build, and test
+      - name: Install dependencies
         run: |
           npm install --legacy-peer-deps
-          npm run build --if-present
-          npm run test --if-present
 
-      - name: Zip Release
+      - name: Build Vite app
+        run: |
+          npm run build
+
+      - name: Show build output (debug)
+        run: |
+          echo "Root content:"
+          ls -R
+          echo "Dist content (if exists):"
+          ls -R dist || echo "dist folder NOT FOUND"
+
+      - name: Zip Release (Vite → dist)
         uses: TheDoctor0/zip-release@0.7.6
         with:
           filename: release.zip
@@ -63,6 +72,7 @@ jobs:
           slot-name: 'Production'
           package: release.zip
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_28F3C99F787A4ADDA8F7E6DA2B28D8C4 }}
+
 
 
 
