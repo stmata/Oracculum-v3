@@ -1,0 +1,88 @@
+:root {
+  --color-primary2: #cf3a34;
+  --color-primary: #cf3a34;
+  --color-primary-soft: rgba(231, 67, 60, 0.2);
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #888888;
+  --color-secondary: #171C3F;
+  --color-description: #4d4a4a;
+  --color-hover: #f7f7f7;
+  --color-bg: var(--color-white);
+  --color-bg-icon: #e9ecf7;
+  --color-text: var(--color-black);
+  --color-muted: var(--color-gray);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --color-secondary2: #171C3F;
+  --picker-bg: radial-gradient(60% 80% at 10% 10%, rgba(59, 130, 246, 0.06), transparent 60%),
+    linear-gradient(0deg, rgba(15, 23, 42, 0.02), rgba(15, 23, 42, 0.02));
+}
+
+body.dark-mode {
+  --color-primary2: #00B3E6;
+  --color-bg-icon: #1e293b;
+  --picker-bg: linear-gradient(180deg, rgba(30, 30, 35, 0.85), rgba(20, 20, 25, 0.95));
+  --color-secondary2: #171C3F;
+  --box-shadow: 0 4px 16px rgba(255, 255, 255, 0.08);
+  --color-description: #949494;
+  --shadow-color: rgba(255, 255, 255, 0.08);
+  --color-bg: #121212;
+  --color-text: #f0f0f0;
+  --color-muted: #bbbbbb;
+  --color-hover: #1e1e1e;
+  --color-primary: #cf3a34;
+  --color-primary-soft: rgba(231, 67, 60, 0.3);
+  --color-secondary: #eaeefc;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.read-the-docs {
+  color: var(--color-muted);
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+// .logo:hover {
+//   filter: drop-shadow(0 0 2em var(--color-primary-soft));
+// }
+// .logo.react:hover {
+//   filter: drop-shadow(0 0 2em #61dafbaa);
+// }
+
+// @keyframes logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   a:nth-of-type(2) .logo {
+//     animation: logo-spin infinite 20s linear;
+//   }
+// }
+
+// .card {
+//   padding: 2em;
+// }
+
+// .read-the-docs {
+//   color: var(--color-gray);
+// }

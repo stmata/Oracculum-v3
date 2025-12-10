@@ -1,0 +1,361 @@
+.sectionHeaderRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 22px;
+    margin-top: 28px;
+}
+
+.ghostPillBtn {
+    border: 2px solid var(--color-secondary);
+    background: transparent;
+    color: var(--color-secondary);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: .02em;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
+}
+
+.ghostPillBtn:hover {
+    transform: translateY(-2px);
+    border: 2px solid var(--color-secondary);
+    background: transparent;
+    color: var(--color-secondary);
+}
+
+.ghostPillBtn:active {
+    animation: clickPulse 0.12s ease-out;
+}
+
+@keyframes clickPulse {
+    0% {
+        box-shadow: 0 0 0 rgba(110, 168, 255, 0);
+        background-color: rgba(110, 168, 255, 0.05);
+    }
+
+    50% {
+        box-shadow: 0 0 8px rgba(110, 168, 255, 0.35);
+        background-color: rgba(110, 168, 255, 0.15);
+    }
+
+    100% {
+        box-shadow: 0 0 0 rgba(110, 168, 255, 0);
+        background-color: transparent;
+    }
+}
+
+
+.rightIntro {
+    max-width: 60%;
+    text-align: right;
+    margin-left: auto;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    opacity: .8;
+    margin: 0 0 6px 0;
+}
+
+.rightTitle {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-secondary);
+    text-align: left;
+}
+
+.rightTitleAccent {
+    color: var(--color-primary);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.rightSubtle {
+    margin-top: 6px;
+    color: #919191;
+    font-weight: 800;
+    font-size: 14px;
+    text-align: left;
+}
+
+.infoBanner {
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: var(--color-bg);
+    border-radius: 18px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+}
+
+.infoBannerTitle {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.infoBannerText {
+    margin: 0 0 8px 0;
+    opacity: .85;
+}
+
+.infoList {
+    margin: 0;
+    padding-left: 18px;
+    opacity: .9;
+}
+
+.cardGrid3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.offerCard,
+.offerCardSplit {
+    position: relative;
+    border-radius: 22px;
+    padding: 18px 18px 18px 18px;
+    background: var(--color-bg);
+    border: 1px solid rgba(255, 255, 255, .14);
+    text-align: left;
+    color: var(--color-secondary);
+    box-shadow: 0 0 30px var(--shadow-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    transition: box-shadow 0.16s ease-out, transform 0.16s ease-out;
+}
+
+.offerCard:hover,
+.offerCardSplit:hover {
+    box-shadow: 0 0 0 1px rgba(120, 120, 255, .22), 0 8px 26px rgba(0, 0, 0, .45);
+    transform: translateY(-1px);
+}
+
+.offerCard {
+    cursor: pointer;
+}
+
+.cardBody {
+    min-height: 120px;
+}
+
+.cardKicker {
+    font-size: 12px;
+    opacity: .75;
+    margin: 0 0 8px 0;
+}
+
+.cardTitle {
+    margin: 0 0 6px 0;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.cardText {
+    margin: 0;
+    opacity: .85;
+}
+
+.cardArrow {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    display: inline-flex;
+    font-size: 22px;
+    color: var(--primary, #6ea8ff);
+}
+
+
+.offerCardSplit .splitActions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.splitBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, .16);
+    background: rgba(255, 255, 255, .02);
+    padding: 10px 12px;
+    border-radius: 12px;
+    color: #e9e9f0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.splitBtn:hover {
+    border-color: rgba(255, 255, 255, .28);
+}
+
+.isDisabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.isDisabled:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .rightIntro {
+        max-width: 100%;
+    }
+
+    .cardGrid3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.isDisabled {
+    opacity: 0.45 !important;
+    cursor: not-allowed !important;
+    filter: grayscale(50%);
+}
+
+.isDisabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.isDisabled .cardTitle::after {
+    content: " – Bientôt disponible";
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.8;
+    margin-left: 4px;
+    color: var(--color-primary);
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .rightIntro {
+        max-width: 70%;
+    }
+
+    .rightTitle {
+        font-size: 24px;
+    }
+
+    .cardGrid3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-bottom: 0px !important;
+        margin-bottom: 0px !important;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 601px) {
+    .cardGrid3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-items: center;
+    }
+
+    .cardGrid3>*:last-child:nth-child(3) {
+        grid-column: span 2;
+        justify-self: center;
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .sectionHeaderRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .ghostPillBtn {
+        order: 2;
+    }
+
+    .rightIntro {
+        order: 1;
+        max-width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .rightTitle,
+    .rightSubtle {
+        text-align: left;
+    }
+
+    .cardGrid3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sectionHeaderRow {
+        align-items: stretch;
+        gap: 12px;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    .ghostPillBtn {
+        align-self: flex-start;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .rightTitle {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .rightSubtle {
+        font-size: 13px;
+    }
+
+    .cardGrid3 {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding-bottom: 40px !important;
+    }
+
+    .offerCard,
+    .offerCardSplit {
+        padding: 16px 14px 16px 14px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .cardBody {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .rightTitle {
+        font-size: 20px;
+    }
+
+    .ghostPillBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+    }
+}

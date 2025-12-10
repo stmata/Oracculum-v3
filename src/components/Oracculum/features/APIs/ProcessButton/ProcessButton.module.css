@@ -1,0 +1,70 @@
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    margin-top: 2rem;
+    background-color: var(--color-bg);
+    margin-bottom: 10px;
+}
+
+.centerWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    color: #666;
+    box-shadow: none;
+}
+
+.btnLight {
+    background-color: var(--color-primary2);
+    color: white;
+}
+
+.btnDark {
+    background-color: #00b3e6;
+    color: white;
+}
+
+.btnDark:hover:enabled {
+    background-color: #0091bd;
+}
+
+
+.btnLoading {
+    background-color: transparent !important;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        width: 80%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .btnLoading {
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+    .btn img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}

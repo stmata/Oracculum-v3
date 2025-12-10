@@ -1,0 +1,130 @@
+.tabBarFixed {
+    position: relative;
+    width: 100%;
+    background: transparent;
+}
+
+.tabGroup {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.tabBtn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0 14px;
+    background: transparent;
+    border: none;
+    color: var(--color-secondary);
+    font-weight: 900;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.tabBtn:hover {
+    color: var(--color-primary);
+}
+
+.tabBtnActive {
+    color: var(--color-primary);
+    font-weight: 600;
+    position: relative;
+}
+
+.tabBtnActive::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--color-primary);
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 6px;
+    font-size: 1.2em;
+}
+
+@media (max-width: 1024px) {
+    .tabBtn {
+        padding: 10px 0 12px;
+        font-size: 0.9rem;
+    }
+
+    .icon {
+        margin-right: 4px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabGroup {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 4px;
+        padding: 0 4px;
+    }
+
+    .tabBtn {
+        flex: 0 0 auto;
+        min-width: 120px;
+        padding: 10px 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .tabBtnActive::after {
+        left: 16px;
+        right: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabBarFixed {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: var(--color-background, #ffffff);
+    }
+
+    .tabGroup {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 0 6px;
+        gap: 2px;
+    }
+
+    .tabBtn {
+        min-width: 80px;
+        padding: 8px 4px 10px;
+        font-size: 0.8rem;
+    }
+
+    .tabBtn span:last-child {
+        display: none;
+    }
+
+    .icon {
+        margin-right: 0;
+        font-size: 1.3em;
+    }
+
+    .tabBtnActive::after {
+        left: 24px;
+        right: 24px;
+    }
+}
+
+@media (max-width: 360px) {
+    .tabBtn {
+        min-width: 70px;
+        padding: 7px 2px 9px;
+    }
+
+    .icon {
+        font-size: 1.25em;
+    }
+}

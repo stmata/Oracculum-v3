@@ -1,0 +1,288 @@
+.customSelect {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.toggle {
+    all: unset;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background: var(--color-bg);
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 0 30px var(--shadow-color);
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    transition: all 0.15s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.customSelect:hover .toggle,
+.customSelect.isOpen .toggle {
+    border-color: var(--color-primary);
+}
+
+.toggle:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.label {
+    color: var(--color-secondary);
+    opacity: 0.7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.iconRight {
+    font-size: 18px;
+    color: var(--color-secondary);
+    opacity: 0.7;
+    display: inline-flex;
+    pointer-events: none;
+}
+
+.menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 50;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background: var(--color-bg);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    max-height: 260px;
+    overflow: auto;
+}
+
+.option {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.option:hover,
+.isHighlighted {
+    background: var(--color-primary);
+    color: white;
+}
+
+.isSelected {
+    color: var(--color-primary);
+    background-color: var(--color-bg);
+}
+
+.multiSelect {
+    position: relative;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.multiToggle {
+    all: unset;
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    background: var(--color-bg);
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 0 30px var(--shadow-color);
+    border: 1px solid rgba(15, 23, 42, 0.10);
+    transition: all 0.15s ease;
+    cursor: pointer;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.multiSelect:hover .multiToggle,
+.multiSelect.isOpen .multiToggle {
+    border-color: var(--color-primary);
+}
+
+.multiLabel {
+    color: var(--color-secondary);
+    opacity: 0.85;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.menu2 {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 50;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background: var(--color-bg);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    max-height: 260px;
+    overflow: auto;
+}
+
+.multiMenu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    z-index: 50;
+    margin: 0;
+    padding: 6px;
+    list-style: none;
+    background: var(--color-bg);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    max-height: 260px;
+    overflow: auto;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.option2 {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.option2:hover,
+.isHighlighted2 {
+    background: var(--color-primary);
+    color: white;
+}
+
+.isSelected2 {
+    color: var(--color-secondary);
+    background-color: var(--color-bg);
+}
+
+.multiOption {
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.multiOption:hover {
+    background: var(--color-primary);
+    color: white !important;
+}
+
+.multiOption:hover input[type="checkbox"]:checked {
+    accent-color: var(--color-secondary);
+}
+
+.multiOption.isSelected {
+    color: var(--color-secondary);
+}
+
+.chkRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.iconRight {
+    font-size: 16px;
+    color: var(--color-secondary);
+    opacity: 0.7;
+    display: inline-flex;
+    pointer-events: none;
+}
+
+.multiSelect,
+.multiToggle {
+    width: 400px;
+}
+
+.compactWidth {
+    width: 290px !important;
+}
+
+.chkInput input[type="checkbox"] {
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.checkOption {
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.checkOption:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.checkOption:hover .chkInput {
+    accent-color: var(--color-secondary);
+}
+
+.checkOption.isSelected {
+    background: rgba(var(--color-primary-rgb), 0.08);
+}
+
+.checkOption.isHighlighted {
+    background: rgba(var(--color-primary-rgb), 0.15);
+}
+
+.chkRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.chkInput {
+    accent-color: var(--color-primary);
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    transition: accent-color 0.15s ease;
+}
+
+.chkInput:hover {
+    accent-color: var(--color-secondary) !important;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+    transition: accent-color 0.15s ease;
+}

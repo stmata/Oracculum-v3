@@ -1,0 +1,88 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+}
+
+.modal {
+    background: #fff;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.darkModal {
+    background: #1e1e1e;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.closeButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #333;
+    line-height: 1;
+}
+
+.darkCloseButton {
+    color: white;
+}
+
+.content {
+    padding: 1rem 1.5rem;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #E7433C;
+}
+
+.message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.actions {
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.okButton {
+    background: #E7433C;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.okButton:hover {
+    background: #cf3a34;
+}
+
+.darkOkButton {
+    background: #00B3E6;
+}
+
+.darkOkButton:hover {
+    background: #008bb0;
+}

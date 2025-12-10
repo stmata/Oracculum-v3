@@ -1,0 +1,308 @@
+ .cardWrapper {
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px;
+   margin-bottom: 20px;
+   cursor: pointer;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .cardWrapper.expanded {
+   flex-direction: row;
+   gap: 20px;
+ }
+
+ .cardLeft {
+   flex: 1;
+   text-align: center;
+ }
+
+ .namestrong {
+   color: var(--color-description);
+ }
+
+ .cardRight {
+   flex: 1;
+   box-shadow: var(--box-shadow);
+ }
+
+ .cardHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 0;
+ }
+
+ .name {
+   text-align: left;
+   margin: 0;
+   color: var(--color-secondary);
+ }
+
+ .score {
+   font-weight: bold;
+   color: #007bff;
+ }
+
+ .reasoning {
+   margin-top: 10px;
+   font-style: italic;
+   color: var(--color-secondary);
+   font-weight: 700;
+ }
+
+ .section {
+   margin-bottom: 16px;
+ }
+
+ .card {
+   box-shadow: var(--box-shadow);
+   border-radius: 8px;
+   padding: 16px;
+   margin-bottom: 20px;
+   cursor: pointer;
+   transition: background-color 0.2s ease;
+
+ }
+
+ .selected {
+   border: 2px solid var(--color-primary);
+ }
+
+
+
+ .score {
+   font-weight: bold;
+   color: var(--color-primary);
+ }
+
+ .reasoning {
+   margin-top: 10px;
+   font-size: 0.9rem;
+ }
+
+ .details {
+   position: relative;
+   padding: 20px;
+ }
+
+ .detailsHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 16px;
+ }
+
+ .closeBtn {
+   font-size: 1.5rem;
+   font-weight: bold;
+   background: none;
+   border: none;
+   color: #888;
+   cursor: pointer;
+   line-height: 1;
+   padding: 0;
+ }
+
+ .closeBtn:hover {
+   color: #e63946;
+ }
+
+ .timelineWrapper {
+   overflow-x: auto;
+   padding: 16px 0;
+ }
+
+ .timelineTrack {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
+   min-width: 100%;
+   position: relative;
+ }
+
+ .timelineItem {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   min-width: 120px;
+   position: relative;
+   text-align: center;
+ }
+
+ .emoji {
+   font-size: 20px;
+ }
+
+ .connector {
+   display: flex;
+   align-items: center;
+   position: relative;
+ }
+
+ .circle {
+   width: 14px;
+   height: 14px;
+   background-color: var(--color-secondary, #007bff);
+   border-radius: 50%;
+   z-index: 1;
+   margin-top: 20px;
+ }
+
+ .line {
+   height: 2px;
+   width: 40px;
+   background-color: #ccc;
+   margin-left: 5px;
+ }
+
+ .label {
+   margin-top: 8px;
+   display: flex;
+   flex-direction: column;
+   gap: 2px;
+ }
+
+ .dates {
+   font-size: 0.8rem;
+   font-weight: bold;
+   color: var(--color-secondary);
+ }
+
+ .title {
+   font-size: 0.75rem;
+   color: var(--color-description);
+ }
+
+
+ .score {
+   font-weight: bold;
+   color: var(--color-primary);
+ }
+
+ .stars {
+   display: flex;
+   align-items: center;
+   gap: 4px;
+ }
+
+ .star {
+   font-size: 1.1rem;
+   color: #f5c518;
+ }
+
+ /* =============== MOBILE (jusqu’à 480px) =============== */
+ @media (max-width: 480px) {
+   .card {
+     padding: 12px;
+     margin-bottom: 10px;
+   }
+
+   .cardHeader {
+     flex-direction: row;
+     align-items: flex-start;
+     gap: 8px;
+   }
+
+   .name {
+     font-size: 14px;
+   }
+
+   .score {
+     font-size: 0.85rem;
+   }
+
+   .stars {
+     gap: 2px;
+   }
+
+   .star {
+     font-size: 0.9rem;
+   }
+
+   .reasoning {
+     font-size: 0.85rem;
+   }
+
+   .timelineWrapper {
+     padding: 10px 0;
+   }
+
+   .timelineTrack {
+     gap: 20px;
+   }
+
+   .timelineItem {
+     min-width: 90px;
+   }
+
+   .dates {
+     font-size: 0.75rem;
+   }
+
+   .title {
+     font-size: 0.7rem;
+   }
+ }
+
+ @media (min-width: 481px) and (max-width: 768px) {
+   .card {
+     padding: 14px 16px;
+     margin-bottom: 4px;
+     margin-top: 1px;
+
+   }
+
+   .name {
+     font-size: 15px;
+   }
+
+   .score {
+     font-size: 0.9rem;
+   }
+
+   .star {
+     font-size: 1rem;
+   }
+
+   .reasoning {
+     font-size: 0.9rem;
+   }
+
+   .timelineTrack {
+     gap: 28px;
+   }
+
+   .timelineItem {
+     min-width: 100px;
+   }
+
+   .dates {
+     font-size: 0.8rem;
+   }
+
+   .title {
+     font-size: 0.75rem;
+   }
+ }
+
+ @media (min-width: 769px) and (max-width: 1024px) {
+   .card {
+     padding: 16px 18px;
+     margin-bottom: 1px;
+     margin-top: 1px;
+   }
+
+   .name {
+     font-size: 16px;
+   }
+
+   .star {
+     font-size: 1.05rem;
+   }
+
+   .timelineTrack {
+     gap: 32px;
+   }
+ }

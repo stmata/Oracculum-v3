@@ -1,0 +1,108 @@
+:root {
+  --modal-bg: #fff;
+  --modal-text: #333;
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+  --primary-color: var(--color-primary);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  max-width: 520px;
+  width: 100%;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideIn 0.25s ease;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+}
+strong{
+    color: var(--color-primary);
+}
+.text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: var(--color-text);
+  font-weight: 700;
+  text-align: left;
+}
+
+.closeButton {
+  position: absolute;
+  top: 14px;
+  right: 1px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  outline: none;
+}
+
+.closeButton:hover {
+  color: var(--color-primary);
+}
+
+.closeButton:focus,
+.closeButton:active,
+.closeButton:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    padding: 24px;
+    max-width: 95%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: var(--overlay-bg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

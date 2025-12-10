@@ -1,0 +1,396 @@
+.shell {
+    position: relative;
+    min-height: 100%;
+    padding: 40px;
+    background: var(--color-bg);
+    overflow: hidden;
+}
+
+.bgGradient {
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 420px;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.backButton {
+    -webkit-tap-highlight-color: transparent;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    width: fit-content;
+    color: var(--color-primary);
+    font-weight: 900;
+    font-size: 13px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.btnDisabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(0.4);
+}
+
+.soonTag {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    margin-left: 4px;
+    opacity: 0.9;
+}
+
+.grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 28px;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cardPrimary,
+.cardSecondary {
+    background: color-mix(in oklab, var(--color-bg) 92%, white 8%);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    backdrop-filter: saturate(140%) blur(6px);
+}
+
+.cardPrimary {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 16px;
+    background: color-mix(in oklab, var(--color-bg) 92%, white 8%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header {
+    margin-bottom: 5px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.cardSecondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(26px, 2.4vw, 34px);
+    line-height: 1.15;
+    margin: 0 0 8px;
+    color: var(--color-secondary);
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+
+.brand {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.subtitle {
+    margin: 0;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+.helper {
+    margin: 8px 0 24px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    text-align: left;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 50px !important;
+}
+
+@media (max-width: 560px) {
+    .actions {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn {
+    --ring: 0 0 0 0px rgba(0, 0, 0, 0);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 15px;
+    padding: 14px 18px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform .08s ease, box-shadow .12s ease, background .15s ease, color .15s ease, border-color .15s ease;
+    box-shadow: var(--ring);
+    text-align: center;
+}
+
+.btn:hover {
+    border: 2px solid transparent;
+}
+
+.btn:focus-visible {
+    outline: none;
+    --ring: 0 0 0 4px color-mix(in oklab, var(--color-primary) 25%, transparent);
+    box-shadow: var(--ring);
+}
+
+.btnPrimary {
+    background: var(--color-secondary);
+    color: var(--color-bg);
+    border-color: var(--color-secondary);
+}
+
+.btnPrimary:hover {
+    transform: translateY(-1px);
+    background: color-mix(in oklab, var(--color-secondary) 88%, white 12%);
+    color: var(--color-bg);
+}
+
+.btnGhost {
+    background: transparent;
+    color: var(--color-primary);
+    border-color: color-mix(in oklab, var(--color-primary) 65%, var(--color-bg) 35%);
+}
+
+.btnGhost:hover {
+    transform: translateY(-1px);
+    background: color-mix(in oklab, var(--color-primary) 8%, transparent);
+    border-color: var(--color-primary);
+}
+
+.btnIcon {
+    font-size: 18px;
+}
+
+.helperRow {
+    position: absolute;
+    bottom: 20px;
+    background:
+        radial-gradient(40% 80% at 50% 50%, color-mix(in oklab, var(--color-primary) 20%, transparent), transparent 70%);
+    left: 0;
+    right: 0;
+    text-align: center;
+
+}
+
+.linkBtn {
+    background: transparent;
+    border: none;
+    color: var(--color-secondary);
+    font-weight: 800;
+    cursor: pointer;
+    padding: 8px 0;
+    transition: opacity .15s ease, transform .08s ease;
+}
+
+.linkBtn:hover {
+    opacity: .9;
+    transform: translateY(-1px);
+}
+
+.linkBtn:focus-visible {
+    outline: none;
+    text-decoration: underline;
+}
+
+.illustrationWrap {
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.illustrationWrap::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 48% 52% 46% 54% / 40% 46% 54% 60%;
+    background:
+        radial-gradient(80% 80% at 50% 50%, color-mix(in oklab, var(--color-primary) 20%, transparent), transparent 70%);
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.illustration {
+    width: 180px;
+    height: auto;
+    display: block;
+    z-index: 1;
+}
+
+.kicker {
+    margin: 10px 0 8px;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.checklist {
+    margin: 8px auto 6px;
+    width: 100%;
+    max-width: 420px;
+    display: grid;
+    gap: 10px;
+    padding: 0;
+}
+
+.checkLine {
+    list-style: none;
+    position: relative;
+    padding-left: 28px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.45;
+    text-align: left;
+}
+
+.checkLine::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-1px);
+    color: var(--color-primary);
+    font-weight: 900;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .btn,
+    .linkBtn {
+        transition: none;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .shell {
+        padding: 24px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cardPrimary {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .helperRow {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .shell {
+        padding: 20px 16px 24px;
+        min-height: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+
+    .cardPrimary,
+    .cardSecondary {
+        padding: 20px 16px;
+    }
+
+    .cardPrimary {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .helperRow {
+        position: static;
+        background: none;
+        margin-top: 16px;
+    }
+
+    .illustrationWrap {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .checklist {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shell {
+        padding: 16px 10px 20px;
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle,
+    .helper,
+    .checkLine {
+        font-size: 14px;
+    }
+
+    .illustration {
+        width: 150px;
+    }
+}

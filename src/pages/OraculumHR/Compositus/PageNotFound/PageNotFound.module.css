@@ -1,0 +1,47 @@
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.modal {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    width: 600px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.message {
+    font-size: 1rem;
+    color: var(--color-gray);
+    margin-bottom: 2rem;
+}
+
+.link {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.link:hover {
+    background-color: #c53630;
+    color: var(--color-white);
+}

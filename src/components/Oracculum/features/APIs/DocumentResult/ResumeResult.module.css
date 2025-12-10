@@ -1,0 +1,679 @@
+.headerRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.customToastWarning {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fff7e6;
+  border: 1px solid #ffe0b3;
+  padding: 0.2rem 0.2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #78350f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
+  max-width: 100%;
+  margin-top: 4vh;
+}
+
+.toastIcon {
+  color: white;
+  border-radius: 8px;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.toastText {
+  flex: 1;
+  line-height: 1.4;
+}
+
+
+.selected {
+  border-color: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+}
+
+.cardOpen {
+  margin-bottom: 1rem;
+}
+
+.cardClosed {
+  margin-bottom: 0;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fullName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.emoji {
+  font-size: 1rem;
+}
+
+.rightt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.topRightWrapper {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 3;
+  background: transparent;
+}
+
+.moreBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  color: #999;
+}
+
+.experience {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0px;
+  color: #999;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-left: 2vw;
+}
+
+.langBadge {
+  background-color: #E7433C;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.darkLangBadge {
+  background-color: #00B3E6 !important;
+
+}
+
+.langExtra {
+  background-color: #eab308;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.darkLangExtra {
+  background-color: #facc15;
+  color: #1e1e1e;
+}
+
+
+.detailsBox {
+  padding: 1rem;
+  border-radius: 0 0 12px 12px !important;
+  background-color: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  margin-top: -1px;
+}
+
+.darkDetailsBox {
+  background-color: #111827;
+}
+
+.detailSection {
+  margin-bottom: 1rem;
+}
+
+.detailTitleGreen {
+  font-weight: bolder;
+  color: #22c55e;
+  margin-bottom: 0.3rem;
+}
+
+.detailTitleBlur {
+  font-weight: bolder;
+  color: #64748b;
+  margin-bottom: 0.3rem;
+}
+
+.detailTitleEduc {
+  font-weight: bolder;
+  color: #6366f1;
+  margin-bottom: 0.3rem;
+}
+
+.detailTitleLang {
+  font-weight: bolder;
+  color: #0ea5e9;
+  margin-bottom: 0.3rem;
+}
+
+.details {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+
+.cardClosed {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+.cardOpen {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.resultWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: stretch;
+}
+
+.cardContainer {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--color-bg);
+}
+
+.resultWrapper.hasFile .cardContainer {
+  flex: 0 0 60%;
+}
+
+.darkCard {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.selected {
+  border-color: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+}
+
+.cardClosed {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+.cardOpen {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1rem;
+  gap: 1rem;
+  position: relative;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.fullName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.emoji {
+  font-size: 1rem;
+}
+
+.topRightWrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.moreBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  color: #999;
+  position: relative;
+  z-index: 2;
+}
+
+.experience {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0;
+  color: #999;
+  white-space: pre-wrap;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-left: 2vw;
+}
+
+.langBadge {
+  background-color: #E7433C;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.darkLangBadge {
+  background-color: #00B3E6 !important;
+}
+
+.langExtra {
+  background-color: #eab308;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.darkLangExtra {
+  background-color: #facc15;
+  color: #1e1e1e;
+}
+
+.detailsBox {
+  padding: 1rem;
+  border-radius: 0 0 12px 12px;
+  background-color: #f9fafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  margin-top: -1px;
+}
+
+.darkDetailsBox {
+  background-color: #111827;
+}
+
+.detailSection {
+  margin-bottom: 1rem;
+}
+
+.detailTitleGreen {
+  font-weight: bolder;
+  color: #22c55e;
+  margin-bottom: 0.3rem;
+}
+
+.detailTitleBlur {
+  font-weight: bolder;
+  color: #64748b;
+  margin-bottom: 0.3rem;
+}
+
+.detailTitleEduc {
+  font-weight: bolder;
+  color: #6366f1;
+  margin-bottom: 0.3rem;
+}
+
+.detailTitleLang {
+  font-weight: bolder;
+  color: #0ea5e9;
+  margin-bottom: 0.3rem;
+}
+
+.details {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.editInput,
+.editInputEmail {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+}
+
+
+.darkEditInput,
+.darkEditInputEmail {
+  background-color: #1e1e1e !important;
+  color: #dddddd !important;
+}
+
+.editInputSkills {
+  width: 98%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  resize: none;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.4;
+  min-height: 1rem;
+  height: auto;
+}
+
+
+.darkeditInputSkills {
+  background-color: #1e1e1e !important;
+  color: #dddddd !important;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.saveButton {
+  background-color: transparent;
+  border: #E7433C 2px solid;
+  color: #E7433C;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.darkSaveButton {
+  border: #00B3E6 2px solid;
+  color: #00B3E6;
+}
+
+
+
+.filePreview {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.imagePreview {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 400px;
+  height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.imagePreview img {
+  max-width: 100%;
+  max-height: none;
+  border-radius: 12px;
+  display: block;
+}
+
+.previewWithDetails {
+  height: 42vh;
+}
+
+.previewWithEdit {
+  height: fit-content;
+}
+
+.filePreview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  display: block;
+}
+
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 97%;
+  margin-bottom: 1rem;
+}
+
+.idNumberWrapper {
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.editLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #555;
+  text-align: left;
+}
+
+.darkeditLabel {
+  color: #ccc;
+}
+
+@media (max-width: 1024px) {
+  .resultWrapper {
+    flex-direction: column;
+  }
+
+  .customToastWarning {
+    margin-top: 8vh !important;
+  }
+
+  .cardContainer {
+    width: 100%;
+    flex: 1 0 auto;
+  }
+
+  .cardContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .left,
+  .rightt {
+    width: 100%;
+  }
+
+  .left {
+    gap: 0.5rem;
+  }
+
+  .fullName {
+    font-size: 1.1rem;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .editInput,
+  .editInputEmail {
+    width: 80%;
+    margin-top: 0.25rem;
+  }
+
+  .editInput {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+
+  .languages {
+    margin-left: 0;
+    gap: 0.5rem;
+  }
+
+  .langBadge,
+  .langExtra {
+    margin-left: 0;
+  }
+
+  .detailsBox {
+    padding: 1rem 0.5rem;
+  }
+
+  .filePreview {
+    width: 100%;
+    flex: none;
+    max-height: 300px;
+  }
+
+  .imagePreview {
+    width: 100%;
+    height: auto;
+  }
+
+  .previewWithDetails {
+    height: auto;
+  }
+
+  .topRightWrapper {
+    justify-content: space-between;
+  }
+
+  .editInputSkills {
+    width: 90%;
+  }
+
+  .actionButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 90% !important;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .topRightWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    order: 0;
+
+  }
+
+  .cardContent {
+    padding-top: 5rem;
+  }
+
+  .moreBtn {
+    position: relative;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    color: #999;
+    background: none;
+    border: none;
+    z-index: 2;
+  }
+
+  .rightt {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+
+}

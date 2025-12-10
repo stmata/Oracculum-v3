@@ -1,0 +1,91 @@
+.formatButtonGroup {
+    justify-content: flex-start;
+    width: 70%;
+    display: flex;
+    gap: 5%;
+}
+
+.all {
+    width: 100%;
+    display: flex;
+    gap: 5% !important;
+    margin-top: 2rem;
+}
+
+.formatButton {
+    flex: 1 1 auto;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    background: transparent;
+    color: black;
+    font-weight: 900;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border: 2px solid background;
+
+}
+
+.formatButton:hover {
+    border: 2px solid var(--color-primary2);
+    color: var(--color-primary2);
+}
+
+.icon {
+    font-size: 1.25rem;
+}
+
+.darkButton {
+    color: white;
+    background-color: #1e1e1e;
+}
+
+.darkButton.active {
+    border: 2px solid #00B3E6;
+    color: #00B3E6;
+}
+
+.disabled {
+    background-color: #e5e7eb;
+    color: #9ca3af !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    border: none !important;
+    box-shadow: none;
+}
+
+.dark .disabled {
+    background-color: #3f4244;
+    color: #afb3bc !important;
+}
+
+@media (max-width: 620px) {
+    .all {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem !important;
+    }
+
+    .formatButtonGroup {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .formatButton {
+        width: 100%;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+}

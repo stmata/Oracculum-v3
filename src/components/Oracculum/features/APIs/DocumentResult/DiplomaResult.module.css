@@ -1,0 +1,510 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.idNumberWrapper {
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.editLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #555;
+  text-align: left;
+}
+
+.darkeditLabel {
+  color: #ccc;
+}
+
+.customToastWarning {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fff7e6;
+  border: 1px solid #ffe0b3;
+  padding: 0.2rem 0.2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #78350f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
+  max-width: 100%;
+  margin-top: 4vh;
+}
+
+.toastIcon {
+  color: white;
+  border-radius: 8px;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.toastText {
+  flex: 1;
+  line-height: 1.4;
+}
+
+.selected {
+  border: 1.5px solid #4ade80;
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.15);
+}
+
+.darkCard {
+  background-color: #1e1e1e;
+}
+
+.card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  gap: 0.2rem;
+  margin-top: 0.25rem;
+  margin-right: 1.5rem;
+}
+
+.country {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.flag {
+  font-size: 2.2rem;
+}
+
+.middle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: start;
+}
+
+.nameRow {
+  display: block;
+
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: inline-flex;
+}
+
+.idNumber {
+  background-color: var(--color-primary2);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.meta {
+  font-size: 0.95rem;
+  color: #827c7c;
+  margin-top: 0.5rem;
+  justify-content: start;
+  text-align: left;
+  font-weight: 600;
+}
+
+
+.right {
+  text-align: right;
+  font-size: 0.95rem;
+  color: #827c7c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: 900;
+
+}
+
+.greenBadge {
+  background-color: #00B3E6;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+
+
+.rightt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  gap: 10px;
+}
+
+
+.moreBtn {
+  display: flex;
+  justify-content: flex-end;
+  width: 10%;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  color: #999;
+  z-index: 10;
+}
+
+.card {
+  flex: 2;
+
+}
+
+.resultWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  align-items: stretch;
+}
+
+.editInputPays,
+.editInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+}
+
+.editInputPays {
+  width: 90%;
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  line-height: 1.4;
+}
+
+.darkEditInputPays {
+  background-color: black !important;
+  color: white;
+}
+
+.editInputFN,
+.editInputLN {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  margin: 0 0.5rem;
+  width: 85%;
+}
+
+.darkEditInputPays,
+.darkeditInputFN,
+.darkeditInputLN,
+.darkeditInputDate,
+.darkeditInputMeta {
+  background-color: black !important;
+  color: white !important;
+}
+
+.editInputLang {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  margin: 1rem 0.5rem;
+}
+
+.idNumberInput {
+  background-color: var(--color-primary2);
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  font-weight: 700;
+  margin-left: 1rem;
+  border: none;
+  outline: none;
+  width: 40%;
+}
+
+.editInputMeta {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  margin: 0 0.5rem;
+  width: 85% !important;
+}
+
+.editInputDate {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: #333333;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 0.25rem 0.75rem;
+  margin: 0 0.5rem;
+  margin-top: 1.6rem;
+  max-width: 100%;
+}
+
+.customToastError {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ffeaea;
+  border: 1px solid #f5c2c7;
+  padding: 0.2rem 0.2rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #842029;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
+  max-width: 100%;
+  margin-top: 4vh;
+}
+
+.editModeDate {
+  margin-top: 0px;
+
+}
+
+
+.dark .idNumberInput {
+  color: white;
+}
+
+.editInput:focus {
+  border-color: #4ade80;
+}
+
+.dark .editInput {
+  color: #dddddd;
+  border-color: #555;
+}
+
+
+
+.contentRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0px;
+  max-height: 300px;
+
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 2rem !important;
+}
+
+.saveButton {
+  background-color: transparent;
+  border: var(--color-primary2) 2px solid;
+  color: var(--color-primary2);
+}
+
+.filePreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 0;
+}
+
+
+.filePreview img,
+.filePreview iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .resultWrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    flex-direction: column !important;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contentRow {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    max-height: none;
+  }
+
+  .left {
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .flag {
+    font-size: 2rem;
+  }
+
+  .country {
+    font-size: 0.95rem;
+  }
+
+  .middle {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .name {
+    font-size: 1.1rem;
+  }
+
+  .meta {
+    font-size: 0.9rem;
+  }
+
+  .right {
+    align-items: flex-start;
+    margin-top: 0.75rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .right>div {
+    font-size: 0.9rem;
+  }
+
+  .moreBtn {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .actionButtons {
+    margin-top: 1.25rem;
+  }
+
+  .saveButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .filePreview {
+    width: 100%;
+    height: 500px;
+    margin-top: 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .filePreview img,
+  .filePreview iframe {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .editInputPays,
+  .editInputFN,
+  .editInputMeta,
+  .editInputDate,
+  .editInputLang {
+    width: 90% !important;
+    margin: 0.5rem 0 auto;
+  }
+
+  .nameRow {
+    margin-bottom: 0.5rem;
+  }
+}

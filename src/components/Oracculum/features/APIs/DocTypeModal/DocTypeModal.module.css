@@ -1,0 +1,197 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #252525;
+}
+
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  justify-content: center;
+}
+
+.typeCard {
+  width: 100%;
+  max-width: 180px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.typeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.cardImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.typeCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.label {
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #252525;
+}
+
+.active {
+  background-color: #fff3f3;
+}
+
+.closeBtn {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.darkTitle {
+  color: white;
+}
+
+
+.dark .modal {
+  background-color: #1a1a1a;
+  color: #eee;
+}
+
+.dark .typeCard {
+  background-color: #2a2a2a;
+  color: #ccc;
+}
+
+.dark .active {
+  background-color: rgba(0, 179, 230, 0.5);
+}
+
+.dark .label {
+  color: #eee;
+}
+
+@media (max-width: 1200px) {
+  .modal {
+    width: 70%;
+    padding: 1.75rem;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .typeGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .typeCard {
+    max-width: 100%;
+  }
+
+  .cardImage {
+    height: 100%;
+  }
+
+  .modal {
+    padding: 1.25rem;
+    max-width: 95%;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .typeGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .typeCard {
+    width: 100%;
+  }
+
+  .cardImage {
+    height: 100%;
+  }
+
+  .label {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .closeBtn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+    width: 100%;
+  }
+
+  .modal {
+    padding: 1rem;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .cardImage {
+    height: 100%;
+  }
+
+  .label {
+    font-size: 0.85rem;
+  }
+
+  .closeBtn {
+    font-size: 0.9rem;
+    padding: 0.65rem 1rem;
+  }
+}

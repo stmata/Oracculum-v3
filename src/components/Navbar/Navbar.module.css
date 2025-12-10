@@ -1,0 +1,299 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: var(--color-bg);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  z-index: 999;
+  padding-top: 5px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.initialsCircle {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin-right: 50px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: var(--color-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  min-width: 190px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-secondary);
+  transition: background 0.2s ease-in-out;
+  text-align: justify !important;
+  justify-content: center;
+}
+
+.dropdownItem:hover {
+  background-color: var(--color-hover);
+}
+
+.icon {
+  font-size: 18px;
+  color: var(--color-secondary);
+  stroke-width: 3;
+
+}
+
+.icon1 {
+  font-size: 18px;
+  color: var(--color-secondary);
+
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--overlay-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalBox {
+  background-color: var(--color-hover);
+  color: var(--modal-text);
+  max-width: 500px;
+  width: 100%;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideIn 0.25s ease;
+  text-align: center;
+}
+
+.modalTitle {
+  font-size: 25px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--color-secondary);
+  margin-bottom: 45px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 45px;
+}
+
+.actions button {
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffeef0;
+  color: var(--color-secondary);
+  transition: background 0.2s ease;
+  width: 100px;
+}
+
+.cancelBtn {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-white) !important;
+}
+
+
+.cancelBtn:hover {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-white);
+}
+
+.optionsGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+
+.optionCard {
+  display: flex;
+  color: var(--color-text);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 3px solid #b0b0b0;
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 120px;
+  height: 70px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--color-bg);
+  user-select: none;
+}
+
+.flag {
+  font-size: 32px;
+  display: block;
+  line-height: 1;
+}
+
+.label {
+  font-size: 16px;
+  color: inherit;
+}
+
+
+.optionCard:hover {
+  border-color: var(--color-secondary);
+}
+
+.selected {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.closeButton {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  color: var(--primary-color);
+}
+
+.optionCard:focus,
+.optionCard:focus-visible,
+.optionCard:active,
+button:focus,
+button:focus-visible,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--color-secondary);
+}
+
+.hr {
+  color: var(--color-primary);
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  color: #777;
+  font-weight: 600;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: var(--overlay-bg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .modalBox {
+    padding: 24px;
+    max-width: 95%;
+  }
+
+  .modalTitle {
+    font-size: 20px;
+  }
+
+  .optionCard {
+    min-width: 100px;
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+
+  .leftSection {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}

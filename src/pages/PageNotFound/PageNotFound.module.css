@@ -1,0 +1,74 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+  color: #E7433C;
+}
+
+.message {
+  font-size: 1rem;
+  color: #666666;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: #E7433C;
+  border: 2px solid #E7433C;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.link:hover {
+  background-color: #E7433C;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .message {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .link {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.2rem;
+  }
+}

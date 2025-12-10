@@ -1,0 +1,292 @@
+.page {
+    padding: 40px clamp(16px, 4vw, 48px);
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.title {
+    font-size: 28px;
+    margin: 0 0 8px;
+    font-weight: 900;
+    color: var(--color-primary2);
+}
+
+.subtitle {
+    margin: 0 0 8px;
+    font-weight: 900;
+    color: var(--color-secondary);
+}
+
+.helper {
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 16px;
+}
+
+.card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 420px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: var(--color-bg);
+    box-shadow: var(--box-shadow);
+    transform: translateY(0);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.55) 0%,
+            rgba(0, 0, 0, 0.38) 35%,
+            rgba(0, 0, 0, 0.10) 70%,
+            rgba(0, 0, 0, 0.0) 100%);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 22px 22px 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.cardTitle {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: #f9fafb;
+    letter-spacing: 0.01em;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.55);
+}
+
+.cardDesc {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #e5e7eb;
+    max-width: 90%;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.35);
+}
+
+
+.disabled {
+    cursor: default !important;
+    pointer-events: auto !important;
+    background-color: rgba(0, 0, 0, 0.45);
+
+}
+
+.lockIcon {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.disabled .overlay {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.disabled .cardTitle {
+    color: white;
+    opacity: 0.9;
+}
+
+.disabled .cardDesc {
+    color: white;
+    opacity: 0.9;
+}
+
+.disabled:hover {
+    transform: none;
+    box-shadow: 0 0 18px rgba(15, 23, 42, 0.5);
+}
+
+.lockTag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999 !important;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+    width: 80%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.disabled:hover .lockTag {
+    opacity: 1;
+}
+
+.comingSoonTag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--color-bg);
+    color: var(--color-secondary);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+@media (max-width: 1200px) {
+    .page {
+        padding: 32px 24px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .card {
+        height: 360px;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+    }
+
+    .cardDesc {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 658px) {
+    .page {
+        padding: 24px 16px;
+    }
+
+    .header {
+        text-align: left;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .helper {
+        font-size: 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        height: 320px;
+        border-radius: 18px;
+    }
+
+    .content {
+        padding: 18px 18px 16px;
+    }
+
+    .cardTitle {
+        font-size: 18px;
+    }
+
+    .cardDesc {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+    .lockTag {
+        width: 85%;
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 20px 12px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .helper {
+        font-size: 13px;
+    }
+
+    .card {
+        height: 280px;
+    }
+
+    .content {
+        padding: 16px 14px 14px;
+    }
+
+    .cardTitle {
+        font-size: 17px;
+    }
+
+    .cardDesc {
+        font-size: 12px;
+    }
+
+    .comingSoonTag {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+
+    .lockTag {
+        width: 90%;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}

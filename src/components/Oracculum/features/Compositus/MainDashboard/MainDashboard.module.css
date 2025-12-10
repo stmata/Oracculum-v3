@@ -1,0 +1,531 @@
+.dashboardContainer {
+    padding: 8%;
+    font-family: sans-serif;
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 100px;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.lastAnalysisBox {
+    flex: 1;
+}
+
+.title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    color: var(--color-secondary);
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    text-align: justify;
+
+}
+
+.viewResultsBtn {
+    padding: 8px 16px;
+    background-color: var(--color-bg);
+    color: var(--color-secondary);
+    border: var(--color-secondary) 2px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-weight: 900;
+}
+
+.viewResultsBtn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    border: var(--color-secondary) 2px solid;
+}
+
+.viewResultsBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.statsSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    gap: 0;
+}
+
+.statItem {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+}
+
+.statItem:last-child {
+    border-right: none;
+}
+
+.statIcon {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.statText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.statValue {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--color-primary);
+    text-align: justify;
+}
+
+.statLabel {
+    font-size: 18px;
+    color: var(--color-secondary);
+    font-weight: 900;
+}
+
+.newBtn {
+    display: block;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    background-color: var(--color-bg);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 0 !important;
+    margin-right: auto;
+    font-weight: 900;
+    transition: all 0.15s ease-in-out;
+    transform: scale(1);
+}
+
+.newBtn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    border: 2px solid var(--color-bg);
+}
+
+.newBtn:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: none;
+    text-align: center;
+    font-weight: 800;
+    font-size: 16px;
+
+}
+
+.table th {
+    color: var(--color-primary);
+}
+
+.actions {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.actionIcon {
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    min-height: 360px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.pagination {
+    margin-top: auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--color-secondary);
+    margin-bottom: 50px;
+}
+
+.pagination button {
+    background-color: var(--color-bg);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 16px;
+}
+
+.pagination button:disabled {
+    opacity: 0.4;
+    border-color: #ccc;
+    color: #ccc;
+    background-color: #f9f9f9;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+}
+
+.pagination span {
+    min-width: 60px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.statsSection {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.statsGroupLeft,
+.statsGroupRight {
+    display: flex;
+    gap: 16px;
+    flex: 1 1 0;
+}
+
+.statsGroupLeft .statItem {
+    flex: 1 1 0;
+}
+
+.statsGroupRight .statItem {
+    flex: 1 1 0;
+
+}
+
+.statsGroupRight {
+    border-left: 1px solid #ccc;
+
+}
+
+@media (max-width: 900px) {
+    .statsSection {
+        flex-direction: column;
+    }
+
+    .statsGroupLeft,
+    .statsGroupRight {
+        width: 100%;
+    }
+}
+
+.tabSpacer {
+    height: 56px;
+}
+
+.candidatesContainer {
+    padding: 0px 20px 20px;
+    width: 100%;
+    top: 100%;
+    height: 100vh !important;
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.leftGroup {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.updateBtn {
+    padding: 8px 16px;
+    background-color: var(--color-bg);
+    color: var(--color-secondary);
+    border: var(--color-secondary) 2px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.updateBtn:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    border: var(--color-secondary) 2px solid;
+}
+
+.updateBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.featureHeader {
+    text-align: center;
+    max-width: 920px;
+    margin: 0 auto 16px;
+    padding: 8px 12px;
+}
+
+.kicker {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin: 0 0 6px;
+    font-weight: 800;
+}
+
+.featureTitle {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0 0 8px;
+    color: var(--color-secondary);
+}
+
+.featureSub {
+    margin: 0 auto 14px;
+    max-width: 720px;
+    opacity: 0.75;
+    font-weight: 800;
+}
+
+.featureHints {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 8px 20px;
+    justify-items: start;
+    list-style: none;
+    padding: 0;
+    margin: 8px auto 0;
+    max-width: 920px;
+    color: inherit;
+    opacity: 0.85;
+}
+
+.hintTab {
+    font-weight: 600;
+}
+
+
+@media (max-width: 1024px) {
+    .dashboardContainer {
+        padding: 5%;
+        margin-top: 80px;
+    }
+
+    .featureTitle {
+        font-size: 28px;
+    }
+
+    .featureSub {
+        max-width: 600px;
+        font-size: 15px;
+    }
+
+    .statsSection {
+        gap: 12px;
+    }
+
+    .statItem {
+        padding: 8px;
+    }
+
+    .statValue {
+        font-size: 20px;
+    }
+
+    .statLabel {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .dashboardContainer {
+        padding: 40px 24px;
+        margin-top: 80px;
+    }
+
+    .featureHeader {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .featureTitle {
+        font-size: 26px;
+    }
+
+    .featureSub {
+        max-width: 600px;
+    }
+
+    .statsSection {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .statsGroupLeft,
+    .statsGroupRight {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .statsGroupRight {
+        border-left: none;
+        border-top: 1px solid #ccc;
+        padding-top: 12px;
+    }
+
+    .statItem {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 12px;
+    }
+
+    .statItem:last-child {
+        border-bottom: none;
+    }
+
+    .tableWrapper {
+        overflow-x: auto;
+        padding-bottom: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboardContainer {
+        padding: 24px 16px;
+        margin-top: 80px;
+
+    }
+
+    .featureTitle {
+        font-size: 24px;
+    }
+
+    .kicker {
+        font-size: 12px;
+    }
+
+    .featureSub {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .newBtn,
+    .viewResultsBtn,
+    .updateBtn {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .statValue {
+        font-size: 18px;
+    }
+
+    .statLabel {
+        font-size: 14px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .pagination button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    .pagination span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .featureTitle {
+        font-size: 20px;
+    }
+
+    .featureSub {
+        font-size: 13px;
+    }
+
+    .statValue {
+        font-size: 16px;
+    }
+
+    .statLabel {
+        font-size: 12px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 12px;
+    }
+}

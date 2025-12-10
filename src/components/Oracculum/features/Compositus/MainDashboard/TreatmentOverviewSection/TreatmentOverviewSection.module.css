@@ -1,0 +1,255 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    align-items: stretch;
+    margin-bottom: 24px;
+    margin-top: 4%;
+}
+
+.leftCard {
+    background: transparent;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 30px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+}
+
+.leftTitle {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-secondary);
+    margin-bottom: 0px;
+}
+
+.leftSubtitle {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 14px;
+    font-weight: 900;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.ctaBtn {
+    align-self: flex-start;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-secondary);
+    color: var(--color-hover);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ctaBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.ctaBtn:active {
+    transform: scale(0.96);
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 28px;
+}
+
+.featureItem {
+    background: rgba(17, 24, 39, 0.04);
+    text-align: left;
+    box-shadow: 0 0 30px var(--shadow-color);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    transition: background .18s ease, transform .18s ease;
+}
+
+.featureItem:hover {
+    background: transparent;
+    transform: translateY(-1px);
+    border: none;
+}
+
+.featureItem[aria-disabled="true"],
+.featureItem:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.featureItemActive {
+    background: rgba(17, 24, 39, 0.06);
+}
+
+.isDisabled,
+.featureItem:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: saturate(0.6);
+}
+
+.pillSoon {
+    margin-left: 8px;
+    padding: 2px 8px;
+    font-size: 11px;
+    line-height: 1;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    vertical-align: middle;
+    color: var(--color-primary);
+}
+
+.featureIcon {
+    width: 28px;
+    justify-content: start;
+    align-items: start;
+    color: var(--color-secondary);
+}
+
+.featureIconSvg {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.featureBody {
+    flex: 1;
+}
+
+.featureTitle {
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-secondary);
+}
+
+.featureDesc {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.dynamicPane {
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    padding-top: 12px;
+}
+
+@media (max-width: 960px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+        gap: 20px;
+    }
+
+    .leftCard {
+        padding: 18px 20px;
+    }
+
+    .featuresGrid {
+        gap: 16px 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .hero {
+        grid-template-columns: 1fr;
+        margin-top: 24px;
+    }
+
+    .leftCard {
+        order: 0;
+        min-height: auto;
+    }
+
+    .featuresGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dynamicPane {
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 720px) {
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .featureItem {
+        padding: 10px 14px;
+    }
+
+    .ctaBtn {
+        padding-inline: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        gap: 16px;
+        margin-top: 18px;
+    }
+
+    .leftCard {
+        padding: 16px 16px;
+        border-radius: 14px;
+    }
+
+    .leftTitle {
+        font-size: 18px;
+    }
+
+    .leftSubtitle {
+        font-size: 13px;
+    }
+
+    .ctaBtn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .featuresGrid {
+        gap: 12px;
+    }
+
+    .featureItem {
+        padding: 9px 12px;
+        border-radius: 10px;
+    }
+
+    .featureTitle {
+        font-size: 13px;
+    }
+
+    .featureDesc {
+        font-size: 12px;
+    }
+
+    .featureIconSvg {
+        font-size: 18px;
+    }
+
+    .dynamicPane {
+        margin-top: 10px;
+        padding-top: 8px;
+    }
+}
