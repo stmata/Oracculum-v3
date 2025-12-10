@@ -1,5 +1,5 @@
-const BASE_URL = window._env_?.VITE_APP_BAS_URL;
-const BASE_URL2 = window._env_?.VITE_APP_BAS_URL2;
+const BASE_URL = window._env_?.VITE_APP_BASE_URL;
+const BASE_URL2 = window._env_?.VITE_APP_BASE_URL2;
 // const BASE_URL2 = (window._env_?.VITE_APP_BAS_URL2 || import.meta.env.VITE_APP_BASE_URL2).replace(/\/$/, "");
 // const BASE_URL = (window._env_?.VITE_APP_BAS_URL || import.meta.env.VITE_APP_BASE_URL).replace(/\/$/, "");
 

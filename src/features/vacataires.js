@@ -1,4 +1,4 @@
-const BASE_URL = window._env_?.VITE_APP_BAS_URL2;
+const BASE_URL = window._env_?.VITE_APP_BASE_URL2;
 
 function safeJsonParse(t) { try { return JSON.parse(t); } catch { return null; } }
 const toBool = (x) => !!x;
